@@ -1,5 +1,5 @@
 body{
-    background-image:url(../image/tailor2.jpg);
+    background-image:url(../image/tailor1.jpg);
     background-size: 100%;
     background-position: right top;
     background-repeat: no-repeat;
@@ -20,8 +20,8 @@ li{
     float: left;
     padding: 15px;
     overflow: hidden;
-    margin-left: 90px;
-    border-bottom-left-radius: 10px;
+    margin-left: 40px;
+    border-bottom-left-radius: 5px;
     size: 10px;
 }
 
@@ -46,6 +46,6 @@ a{
     text-align: center;
     float: left;
     margin-top: 3em;
-    margin-left: 8em;
+    margin-left: 4em;
     font-size: 2em;
 }

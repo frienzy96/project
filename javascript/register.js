@@ -16,8 +16,7 @@
    //initialize firestore database and save the instance to db variable 
      const db= firebase.firestore();
 
-      //create a collection and empty document and save the instance to docRef variable 
-      const docRef = db.collection("messages").doc();
+      //create a collection and empty document and save the instance to docRef variable
       let save = document.getElementById('save');  
   
    //declared this global variable so they can be accessed by all functions 
@@ -54,7 +53,7 @@
     else {
         alert ("Successfully")
     }     
-
+    const docRef = db.collection("user").doc(phone);
         docRef.set({
         fname:fname,
         lname:lname,
@@ -67,7 +66,23 @@
       }).catch(function(error){
         console.log("Got an error:",error);
 
+       const docRef = db.getUserData=() =>{
+           docRef.get().then(function(doc){
+               if (doc && doc.exist){
+                   const myData = doc.data();
+                   let name = myData.name
+                   nametext.innerHTML =name
+               }
+
+               docRef.get({
+                   
+
+               })
+           }).catch(function(error){
+               console.log(error)
+           })
+       }
         
       });
-   
+        
    });
