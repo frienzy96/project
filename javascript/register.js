@@ -65,24 +65,6 @@
         alert(" your message was Successfully sent!");
       }).catch(function(error){
         console.log("Got an error:",error);
-
-       const docRef = db.getUserData=() =>{
-           docRef.get().then(function(doc){
-               if (doc && doc.exist){
-                   const myData = doc.data();
-                   let name = myData.name
-                   nametext.innerHTML =name
-               }
-
-               docRef.get({
-                   
-
-               })
-           }).catch(function(error){
-               console.log(error)
-           })
-       }
-        
       });
         
    });

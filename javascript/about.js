@@ -16,7 +16,6 @@
      const db= firebase.firestore();
 
       //create a collection and empty document and save the instance to docRef variable 
-      const docRef = db.collection("messages").doc();
       let save = document.getElementById('save');  
   
    //declared this global variable so they can be accessed by all functions 
@@ -58,6 +57,6 @@
         console.log("Got an error:",error);
 
 
-      });
+      }); 
    
    });

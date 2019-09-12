@@ -9,17 +9,17 @@
     
 </head>
 <body>
-    <div class="container">
+    <div id="container" class="container">
         <h3>REGESTRATION FORM</h3>
  <form action="action_page.php">
         <label for="fname">firstname</label>
-        <input type="text" id="fname" name="firstname" placeholder="fisrt_name"><br>
+        <input type="text" id="fname" name="firstname" placeholder="fisrtname"><br>
        
         <label for="lname">lastname</label>
-        <input type="text" id="lname" name="lastname" placeholder="last_name"><br>
+        <input type="text" id="lname" name="lastname" placeholder="lastname"><br>
 
         <label for="email">emailaddress</label>
-        <input type="text" id="email" name="emailaddress" placeholder="email_address"><br>
+        <input type="text" id="email" name="emailaddress" placeholder="email"><br>
 
         <label for="phonenumber">phonenumber</label>
         <input type="text" id="phone" name="phonenumber" placeholder="phonenumber"><br>
@@ -28,18 +28,42 @@
         <input type="password" id="password" name="password" placeholder="password"><br>
 
         <label for="confirm_password">confirm_password</label>
-        <input type="password" id="cmpass" name="confirm_password" placeholder="confirm_password"><br>
+        <input type="password" id="cmpass" name="confirm_password" placeholder="confirm spassword"><br>
 
-        <button type="button" id="save" class="registerbtn">Register</button>
+        <button type="button" id="submit" class="registerbtn">Register</button>
  </form>
         <div class="container signin">
              <p>Already have an account? <a href="#">Sign in</a>.</p>
         </div>
     </div>
+
+    <div id="container" class="container2">
+        <h1> hello world</h1>
+        <p>what is your name</p>
+        <input id="name" requrid>
+        <button id="submit">submit</button>
+    </div>
+
+<div id="sendingLayout"class="container2">
+    <h1>please wait</h1>
+    <video src="image/git.mp4"></video>
+</div>
+
+<div id="successLayout" class="container2">
+    <h1>congratulation,registration succesful</h1>
+    <button id="login">login</button>
+
+</div>
+
+
+<div id="failedLayout">
+    <h1>registration failed,please try again</h1>
+</div>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
  <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
  <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-firestore.js"></script>
- <script src="javascript/register.js"></script>
+ <script src="javascript/script.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
 https://firebase.google.com/docs/web/setup#config-web-app -->
 </body>
