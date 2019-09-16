@@ -9,7 +9,7 @@ var firebaseConfig = {
     appId: "1:643151002156:web:0be11d4c79ee0423"
   }; 
    // Initialize Firebase
-   firebase.initializeApp(firebaseConfig);
+   firebase.initializeApp(firebaseConfig)
    console.log("firebase loaded");
    
    //initialize firestore database and save the instance to db variable 
@@ -18,7 +18,7 @@ var firebaseConfig = {
       //create a collection and empty document and save the instance to docRef variable 
       let submit = document.getElementById('submit'); 
       
-      let container, sendingLayout,successLayout,failedLayout;
+      let container, sendingLayout,successLayout,login,failedLayout;
       container = document.getElementById("container");
       sendingLayout = document.getElementById("sendingLayout");
       successLayout = document.getElementById("successLayout");
@@ -41,7 +41,7 @@ var firebaseConfig = {
     let cmpass =document.getElementById("cmpass").value;
    
    
-    if (!fname.match(/^[azAZ]+$/)){
+    if (!fname.match(/^[a-zA-Z]+$/)){
         alert ("enter your frist Name")
     }
         else if (!lname.match(/^[a-zA-Z]+$/)){
@@ -63,11 +63,20 @@ var firebaseConfig = {
    
    const submitData = document.getElementById("submit");
     submitData.addEventListener('click',()=>{
-        name = document.getElementById("name").value;
+       
         if(name!=null){
             sendData()
         }else{
-   
+            firebase.auth().createUserWithEmailAndPassword(Email, Pass).then(function(){
+                SendData()
+            }).catch(function(error){
+                //Handle errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log("error:" + error);
+                // ...
+            
+         });
         }
     })
     const sendData = ()=>{
@@ -96,5 +105,9 @@ var firebaseConfig = {
             console.log("error:"+error);
         })
     }
-   
+    //initialze loginpage and send the user there
+    const login = document.getElementById("login");
+    login.addEventListener('click', ()=>{
+        window.location = "login.html";
+    })
 });
